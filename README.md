@@ -7,6 +7,7 @@ The tool uses dynamic source-to-target column mappings, configurable data types 
 ## Key Features
 
 - Dynamic source-to-target column mapping
+- Single source worksheet to multiple target worksheet migration
 - Configuration-driven migration with no VBA changes required for new mappings
 - Supports TEXT, NUMERIC and DATE data types
 - Configurable date and numeric formatting
