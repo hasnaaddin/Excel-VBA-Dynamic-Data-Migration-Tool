@@ -51,3 +51,34 @@ The solution is split into five VBA modules, separating the migration, validatio
 | `SPACES.bas` | Detects, reports and cleans leading, trailing and duplicate whitespace in migrated data. |
 
 This modular structure keeps the core migration process separate from supporting validation and data-quality functions, making the solution easier to maintain and extend.
+
+## Demo Files
+
+The repository includes fictional demo files so the migration process can be tested without using any client or commercially sensitive data.
+
+### Source
+`Demo_Files/Demo_Source_CustomerData.xlsx`
+
+Contains a fictional customer dataset used as the migration source.
+
+### Target Template
+`Demo_Files/Demo_Target_CustomerImport.xlsx`
+
+Contains the target import structure used by the migration process. The demo also includes multiple target worksheets to demonstrate that a single source worksheet can populate more than one target worksheet.
+
+### Portfolio Workbook
+`Data_Migration_Portfolio.xlsm`
+
+Contains the Frontpage, Control configuration, Validation reporting and VBA automation.
+
+The demo configuration demonstrates:
+
+- Dynamic source-to-target mappings
+- One source worksheet populating multiple target worksheets
+- TEXT, NUMERIC and DATE handling
+- Target-only fields populated using default values
+- Record-count reconciliation
+- Numeric sum reconciliation
+- Missing-column reporting
+- Whitespace detection and cleansing
+- Timestamped migration output
