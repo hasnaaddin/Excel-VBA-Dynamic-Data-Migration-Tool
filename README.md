@@ -122,3 +122,24 @@ The populated target workbook is generated as a new timestamped file, including 
 > **Note:** If the demo files are stored in OneDrive, ensure AutoSave is disabled for the target template before running the migration. This prevents Excel/OneDrive from automatically saving migrated data back into the original template while it is open.
 
 The migration output is created as a new timestamped `.xlsx` file, leaving the target template available for reuse.
+
+## Technical Highlights
+
+This project demonstrates practical Excel VBA engineering for data migration and ETL-style processing, including:
+
+- Configuration-driven processing rather than hard-coded column mappings
+- Dynamic worksheet and column discovery
+- Single-source to multi-target worksheet migration
+- Source-to-target data transformation
+- Reusable helper functions
+- Dynamic row-count calculation
+- Target-only field generation using configurable default values
+- Data-type-aware formatting for TEXT, NUMERIC and DATE fields
+- Record-count reconciliation
+- Numeric control-total reconciliation
+- Automated exception and missing-column logging
+- Whitespace detection and cleansing
+- Timestamped output generation
+- Modular separation of migration, audit, default-value and data-quality logic
+
+The approach allows mappings and migration rules to be changed through the Excel Control worksheet without modifying the underlying VBA code.
