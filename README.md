@@ -82,3 +82,25 @@ The demo configuration demonstrates:
 - Missing-column reporting
 - Whitespace detection and cleansing
 - Timestamped migration output
+
+## Screenshots
+
+### Frontpage
+Run the migration directly from the Excel interface.
+
+![Frontpage](Screenshots/01_Frontpage.png)
+
+### Configuration-Driven Mapping
+Source-to-target mappings, data types, formats and default values are maintained through the Control worksheet.
+
+![Control Mappings](Screenshots/02_Control_Mappings.png)
+
+### Automated Validation & Reconciliation
+The Validation worksheet compares source and target record counts and numeric totals, providing clear Match / No Match results.
+
+![Validation Results](Screenshots/03_Validation_Results.png)
+
+### Migrated Output
+The populated target workbook is generated as a new timestamped file, including fields automatically populated using configured default values.
+
+![Migrated Output](Screenshots/04_Migrated_Output.png)
