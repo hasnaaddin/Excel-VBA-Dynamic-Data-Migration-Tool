@@ -143,3 +143,23 @@ This project demonstrates practical Excel VBA engineering for data migration and
 - Modular separation of migration, audit, default-value and data-quality logic
 
 The approach allows mappings and migration rules to be changed through the Excel Control worksheet without modifying the underlying VBA code.
+
+## Validation & Data Quality
+
+The tool performs automated validation during the migration process to help confirm that data has been transferred accurately.
+
+For each configured mapping, the Validation worksheet can report:
+
+- Source record count
+- Target record count
+- Count validation status (`Match`, `No Match` or `No Data`)
+- Source numeric total
+- Target numeric total
+- Numeric sum validation status
+- Missing source or target columns
+- Leading and trailing whitespace
+- Duplicate spaces within migrated values
+
+Whitespace issues are identified and reported before the affected target values are cleansed.
+
+Together, these checks provide an audit and reconciliation layer around the migration process rather than relying solely on successful VBA execution.
