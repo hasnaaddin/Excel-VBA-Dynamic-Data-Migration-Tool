@@ -104,3 +104,21 @@ The Validation worksheet compares source and target record counts and numeric to
 The populated target workbook is generated as a new timestamped file, including fields automatically populated using configured default values.
 
 ![Migrated Output](Screenshots/04_Migrated_Output.png)
+
+## How to Run
+
+1. Download or clone this repository.
+2. Open `Data_Migration_Portfolio.xlsm` in Microsoft Excel.
+3. Enable macros when prompted.
+4. Review the mappings on the `Control` worksheet.
+5. Click **Run Migration** on the Frontpage.
+6. When prompted, select:
+   - `Demo_Files/Demo_Source_CustomerData.xlsx` as the source file.
+   - `Demo_Files/Demo_Target_CustomerImport.xlsx` as the target template.
+7. Wait for the migration to complete.
+8. Review the `Validation` worksheet for reconciliation results.
+9. Click **Open Latest File** on the Frontpage to open the generated migrated workbook.
+
+> **Note:** If the demo files are stored in OneDrive, ensure AutoSave is disabled for the target template before running the migration. This prevents Excel/OneDrive from automatically saving migrated data back into the original template while it is open.
+
+The migration output is created as a new timestamped `.xlsx` file, leaving the target template available for reuse.
