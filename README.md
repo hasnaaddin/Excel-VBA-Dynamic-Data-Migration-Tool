@@ -37,3 +37,17 @@ The migration process is controlled through the Excel `Control` worksheet rather
 10. A timestamped migrated workbook is generated and linked from the Frontpage.
 
 The original target workbook acts as the import template, while the populated migration output is saved as a new timestamped file.
+
+## VBA Architecture
+
+The solution is split into five VBA modules, separating the migration, validation and data-quality logic.
+
+| Module | Purpose |
+|---|---|
+| `MIGRATION.bas` | Main migration engine. Reads configuration, performs dynamic mappings, handles formatting and generates the migrated output. |
+| `HELPER.bas` | Reusable helper functions for configuration lookup, file selection, column matching and worksheet processing. |
+| `AUDIT.bas` | Records source and target counts, numeric totals and reconciliation results on the Validation sheet. |
+| `DEFAULT_VALUE.bas` | Populates target fields with configured default values when no corresponding source column is available. |
+| `SPACES.bas` | Detects, reports and cleans leading, trailing and duplicate whitespace in migrated data. |
+
+This modular structure keeps the core migration process separate from supporting validation and data-quality functions, making the solution easier to maintain and extend.
